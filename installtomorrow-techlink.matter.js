@@ -81,7 +81,7 @@ window.addEventListener("load", (event) => {
 
   function addMouseInteraction() {
     // add mouse control
-    var mouse = Matter.Mouse.create(document.body);
+    var mouse = Matter.Mouse.create(document.getElementById("matter"));
     var mouseConstraint = Matter.MouseConstraint.create(solver, {
       mouse: mouse,
       constraint: {
