@@ -89,6 +89,17 @@ window.addEventListener("load", (event) => {
       },
     });
 
+    // Enables page scrolling by dissabling scroll capture by mouseconstraint.
+    // https://github.com/liabru/matter-js/issues/929#issuecomment-720124704
+    mouseConstraint.mouse.element.removeEventListener(
+      "mousewheel",
+      mouseConstraint.mouse.mousewheel
+    );
+    mouseConstraint.mouse.element.removeEventListener(
+      "DOMMouseScroll",
+      mouseConstraint.mouse.mousewheel
+    );
+
     Matter.World.add(solver.world, mouseConstraint);
 
     return mouseConstraint;
