@@ -1,4 +1,3 @@
-
 /*
    Requirisites:
         - <button> element with id="start-matter"
@@ -137,6 +136,8 @@ window.addEventListener("load", (event) => {
       size = two.width * 0.08;
     }
 
+    size = size / 3;
+
     var leading = size * 0.8;
 
     for (var i = 0; i < two.scene.children.length; i++) {
@@ -154,6 +155,11 @@ window.addEventListener("load", (event) => {
       text.leading = leading;
 
       var rect = text.getBoundingClientRect(true);
+      // Change rect size here
+      rect = {
+        width: rect.width + 200,
+        height: 80,
+      };
       rectangle.width = rect.width;
       rectangle.height = rect.height;
 
@@ -161,7 +167,8 @@ window.addEventListener("load", (event) => {
       Matter.Body.scale(entity, rect.width, rect.height);
       entity.scale.set(rect.width, rect.height);
 
-      text.size = size / 3;
+      // Change text size here
+      text.size = size;
     }
   }
 
@@ -227,8 +234,9 @@ window.addEventListener("load", (event) => {
       // rectangle.opacity = 0.75;
       rectangle.visible = true;
 
-      var entity = Matter.Bodies.rectangle(ox, oy, 1, 1);
-      Matter.Body.scale(entity, rect.width, rect.height);
+      // Change friction and margin here
+      var entity = Matter.Bodies.rectangle(ox, oy, 1, 1, { friction: 0.5 });
+      Matter.Body.scale(entity, rect.width + 1, rect.height + 1);
 
       entity.scale = new Two.Vector(rect.width, rect.height);
       entity.object = group;
@@ -277,4 +285,3 @@ window.addEventListener("load", (event) => {
     return rectangle;
   }
 });
-
