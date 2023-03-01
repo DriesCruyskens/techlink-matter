@@ -4,6 +4,27 @@
         - <div> element with id="matter" and sized
 
 */
+
+function shuffle(array) {
+  let currentIndex = array.length,
+    randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
+  }
+
+  return array;
+}
+
 window.addEventListener("load", (event) => {
   var vector = new Two.Vector();
   var entities = [];
@@ -46,20 +67,51 @@ window.addEventListener("load", (event) => {
           "Elektrotechnicus",
         ]
       : [
-          "Verwarmingsspecialist",
-          "Technicus hernieuwbare energie",
-          "Servicetechnieker",
-          "Technicus inbraakbeveiligingssystemen",
           "Koeltechnicus",
-          "Technicus lichtreclame",
+          "Servicetechnieker",
           "Loodgieter",
-          "Elektrotechnicus",
           "Onderhoudstechnicus",
-          "Installateur zonnepanelen",
+          "Elektrotechnicus",
           "Industrieel elektrotechnisch installateur",
-
+          "Technicus hernieuwbare energie",
           "Klimatisatietechnicus",
+          "Technicus lichtreclame",
+          "Installateur zonnepanelen",
+          "Verwarmingsspecialist",
+          "Technicus inbraakbeveiligingssystemen",
         ];
+
+        // [
+        //   "Installateur zonnepanelen",
+        //   "Technicus hernieuwbare energie",
+        //   "Verwarmingsspecialist",
+        //   "Onderhoudstechnicus",
+        //   "Klimatisatietechnicus",
+        //   "Technicus inbraakbeveiligingssystemen",
+        //   "Elektrotechnicus",
+        //   "Servicetechnieker",
+        //   "Technicus lichtreclame",
+        //   "Loodgieter",
+        //   "Koeltechnicus",
+        //   "Industrieel elektrotechnisch installateur",
+        // ];
+
+        // [
+        //   "Koeltechnicus",
+        //   "Servicetechnieker",
+        //   "Loodgieter",
+        //   "Onderhoudstechnicus",
+        //   "Elektrotechnicus",
+        //   "Industrieel elektrotechnisch installateur",
+        //   "Technicus hernieuwbare energie",
+        //   "Klimatisatietechnicus",
+        //   "Technicus lichtreclame",
+        //   "Installateur zonnepanelen",
+        //   "Verwarmingsspecialist",
+        //   "Technicus inbraakbeveiligingssystemen",
+        // ];
+
+  console.log(copy);
 
   var solver = Matter.Engine.create();
   solver.world.gravity.y = 1;
@@ -168,7 +220,7 @@ window.addEventListener("load", (event) => {
       size = two.width * 0.08;
     }
 
-    size = two.width > 1000 ? size / 3 : size / 2.7;
+    size = two.width > 1000 ? size / 3 : size / 2.2;
 
     var leading = size;
 
@@ -190,7 +242,7 @@ window.addEventListener("load", (event) => {
       // Change rect size here
       rect = {
         width: rect.width,
-        height: 60,
+        height: two.width > 1000 ? 60 : 50,
       };
       rectangle.width = rect.width;
       rectangle.height = rect.height;
@@ -200,7 +252,7 @@ window.addEventListener("load", (event) => {
       entity.scale.set(rect.width, rect.height);
 
       // Change text size here
-      text.size = size * 0.8;
+      text.size = two.width > 1000 ? size * 0.8 : size * 0.95;
     }
   }
 
@@ -247,7 +299,7 @@ window.addEventListener("load", (event) => {
 
       group.translation.x = ox;
       group.translation.y = oy;
-      text.translation.y = 10;
+      text.translation.y = two.width > 1000 ? 10 : 12;
 
       var rectangle = new Two.Rectangle(0, 0, rect.width, rect.height);
       rectangle.fill = "rgb(255, 255, 255)";
