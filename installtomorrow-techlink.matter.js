@@ -46,19 +46,19 @@ window.addEventListener("load", (event) => {
           "Elektrotechnicus",
         ]
       : [
-          "Loodgieter",
-          "Koeltechnicus",
           "Verwarmingsspecialist",
+          "Technicus hernieuwbare energie",
           "Servicetechnieker",
           "Technicus inbraakbeveiligingssystemen",
+          "Koeltechnicus",
           "Technicus lichtreclame",
-          "Industrieel elektrotechnisch installateur",
-          "Installateur zonnepanelen",
+          "Loodgieter",
           "Elektrotechnicus",
+          "Onderhoudstechnicus",
+          "Installateur zonnepanelen",
+          "Industrieel elektrotechnisch installateur",
 
           "Klimatisatietechnicus",
-          "Technicus hernieuwbare energie",
-          "Onderhoudstechnicus",
         ];
 
   var solver = Matter.Engine.create();
@@ -168,7 +168,7 @@ window.addEventListener("load", (event) => {
       size = two.width * 0.08;
     }
 
-    size = size / 3;
+    size = two.width > 1000 ? size / 3 : size / 2.7;
 
     var leading = size;
 
