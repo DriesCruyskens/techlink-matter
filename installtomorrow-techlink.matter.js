@@ -23,26 +23,43 @@ window.addEventListener("load", (event) => {
     "Testing",
   ];
 
-  // var copy = [
-  //   "Loodgieter",
-  //   "Koeltechnicus",
-  //   "Verwarmingsspecialist",
-  //   "Elektrotechnicus",
-  //   "Servicetechnieker",
-  //   "Technicus inbraakbeveiligingssystemen",
-  //   "Technicus lichtreclame",
-  //   "Industrieel elektrotechnisch installateur",
-  //   "Installateur zonnepanelen",
-  //   "Klimatisatietechnicus",
-  //   "Technicus hernieuwbare energie",
-  //   "Onderhoudstechnicus",
-  // ];
-
   var two = new Two({
     type: Two.Types.canvas,
     fitted: true,
     autostart: false,
   }).appendTo(document.getElementById("matter"));
+
+  var copy =
+    two.width > 1000
+      ? [
+          "Technicus hernieuwbare energie",
+          "Onderhoudstechnicus",
+          "Industrieel elektrotechnisch installateur",
+          "Servicetechnieker",
+          "Verwarmingsspecialist",
+          "Technicus lichtreclame",
+          "Koeltechnicus",
+          "Technicus inbraakbeveiligingssystemen",
+          "Installateur zonnepanelen",
+          "Loodgieter",
+          "Klimatisatietechnicus",
+          "Elektrotechnicus",
+        ]
+      : [
+          "Loodgieter",
+          "Koeltechnicus",
+          "Verwarmingsspecialist",
+          "Servicetechnieker",
+          "Technicus inbraakbeveiligingssystemen",
+          "Technicus lichtreclame",
+          "Industrieel elektrotechnisch installateur",
+          "Installateur zonnepanelen",
+          "Elektrotechnicus",
+
+          "Klimatisatietechnicus",
+          "Technicus hernieuwbare energie",
+          "Onderhoudstechnicus",
+        ];
 
   var solver = Matter.Engine.create();
   solver.world.gravity.y = 1;
@@ -67,10 +84,10 @@ window.addEventListener("load", (event) => {
   ]);
 
   var defaultStyles = {
-    size: two.width * 0.1,
+    size: two.width * 0.01,
     weight: 700,
     fill: "black",
-    leading: two.width * 0.08 * 0.8,
+    leading: two.width > 1000 ? two.width * 0.000001 : two.width * 0.0001,
     family: "Angus, Arial, sans-serif",
     alignment: "center",
     baseline: "baseline",
@@ -153,7 +170,7 @@ window.addEventListener("load", (event) => {
 
     size = size / 3;
 
-    var leading = size * 0.8;
+    var leading = size;
 
     for (var i = 0; i < two.scene.children.length; i++) {
       var child = two.scene.children[i];
@@ -172,8 +189,8 @@ window.addEventListener("load", (event) => {
       var rect = text.getBoundingClientRect(true);
       // Change rect size here
       rect = {
-        width: rect.width + 200,
-        height: 80,
+        width: rect.width,
+        height: 60,
       };
       rectangle.width = rect.width;
       rectangle.height = rect.height;
@@ -183,7 +200,7 @@ window.addEventListener("load", (event) => {
       entity.scale.set(rect.width, rect.height);
 
       // Change text size here
-      text.size = size;
+      text.size = size * 0.8;
     }
   }
 
@@ -230,7 +247,7 @@ window.addEventListener("load", (event) => {
 
       group.translation.x = ox;
       group.translation.y = oy;
-      text.translation.y = 14;
+      text.translation.y = 10;
 
       var rectangle = new Two.Rectangle(0, 0, rect.width, rect.height);
       rectangle.fill = "rgb(255, 255, 255)";
