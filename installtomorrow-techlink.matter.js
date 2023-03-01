@@ -23,6 +23,21 @@ window.addEventListener("load", (event) => {
     "Testing",
   ];
 
+  // var copy = [
+  //   "Loodgieter",
+  //   "Koeltechnicus",
+  //   "Verwarmingsspecialist",
+  //   "Elektrotechnicus",
+  //   "Servicetechnieker",
+  //   "Technicus inbraakbeveiligingssystemen",
+  //   "Technicus lichtreclame",
+  //   "Industrieel elektrotechnisch installateur",
+  //   "Installateur zonnepanelen",
+  //   "Klimatisatietechnicus",
+  //   "Technicus hernieuwbare energie",
+  //   "Onderhoudstechnicus",
+  // ];
+
   var two = new Two({
     type: Two.Types.canvas,
     fitted: true,
