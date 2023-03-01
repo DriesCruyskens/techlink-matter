@@ -72,7 +72,7 @@ window.addEventListener("load", (event) => {
           "Loodgieter",
           "Onderhoudstechnicus",
           "Elektrotechnicus",
-          "Industrieel elektrotechnisch installateur",
+          //"Industrieel elektrotechnisch installateur",
           "Technicus hernieuwbare energie",
           "Klimatisatietechnicus",
           "Technicus lichtreclame",
