@@ -111,7 +111,7 @@ window.addEventListener("load", (event) => {
         //   "Technicus inbraakbeveiligingssystemen",
         // ];
 
-  console.log(copy);
+  //console.log(copy);
 
   var solver = Matter.Engine.create();
   solver.world.gravity.y = 1;
