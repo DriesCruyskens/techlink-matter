@@ -57,7 +57,7 @@ window.addEventListener("load", (event) => {
           "Technicien.ne en énergies renouvelables",
           "Spécialiste du chauffage",
           "Électrotechnicie.ne",
-          //"Installateur.rice en électrotechnique industrielle",
+          "Installateur.rice en électrotechnique industrielle",
           "Technicien.ne de maintenance",
           "Technicien.ne d'enseignes lumineuses",
           "Installateur.rice de panneaux solaires",
@@ -73,7 +73,7 @@ window.addEventListener("load", (event) => {
           "Technicien.ne en climatisation",
           "Technicien.ne de maintenance",
           "Technicien.ne du froid",
-          "Installateur.rice en électrotechnique industrielle",
+          //"Installateur.rice en électrotechnique industrielle",
           "Plombier",
         ];
 
