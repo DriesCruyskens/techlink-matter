@@ -53,65 +53,29 @@ window.addEventListener("load", (event) => {
   var copy =
     two.width > 1000
       ? [
-          "Technicus hernieuwbare energie",
-          "Onderhoudstechnicus",
-          "Industrieel elektrotechnisch installateur",
-          "Servicetechnieker",
-          "Verwarmingsspecialist",
-          "Technicus lichtreclame",
-          "Koeltechnicus",
-          "Technicus inbraakbeveiligingssystemen",
-          "Installateur zonnepanelen",
-          "Loodgieter",
-          "Klimatisatietechnicus",
-          "Elektrotechnicus",
+          "Plombier",
+          "Technicien.ne en énergies renouvelables",
+          "Spécialiste du chauffage",
+          "Électrotechnicie.ne",
+          "Installateur.rice en électrotechnique industrielle",
+          "Technicien.ne de maintenance",
+          "Technicien.ne d'enseignes lumineuses",
+          "Installateur.rice de panneaux solaires",
+          "Technicien.ne en climatisation",
+          "Technicien.ne du froid",
         ]
       : [
-          "Koeltechnicus",
-          "Servicetechnieker",
-          "Loodgieter",
-          "Onderhoudstechnicus",
-          "Elektrotechnicus",
-          "Industrieel elektrotechnisch installateur",
-          "Technicus hernieuwbare energie",
-          "Klimatisatietechnicus",
-          "Technicus lichtreclame",
-          "Installateur zonnepanelen",
-          "Verwarmingsspecialist",
-          "Technicus inbraakbeveiligingssystemen",
+          "Installateur.rice de panneaux solaires",
+          "Spécialiste du chauffage",
+          "Technicien.ne d'enseignes lumineuses",
+          "Technicien.ne en énergies renouvelables",
+          "Électrotechnicie.ne",
+          "Technicien.ne en climatisation",
+          "Technicien.ne de maintenance",
+          "Technicien.ne du froid",
+          "Installateur.rice en électrotechnique industrielle",
+          "Plombier",
         ];
-
-        // [
-        //   "Installateur zonnepanelen",
-        //   "Technicus hernieuwbare energie",
-        //   "Verwarmingsspecialist",
-        //   "Onderhoudstechnicus",
-        //   "Klimatisatietechnicus",
-        //   "Technicus inbraakbeveiligingssystemen",
-        //   "Elektrotechnicus",
-        //   "Servicetechnieker",
-        //   "Technicus lichtreclame",
-        //   "Loodgieter",
-        //   "Koeltechnicus",
-        //   "Industrieel elektrotechnisch installateur",
-        // ];
-
-        // [
-        //   "Koeltechnicus",
-        //   "Servicetechnieker",
-        //   "Loodgieter",
-        //   "Onderhoudstechnicus",
-        //   "Elektrotechnicus",
-        //   "Industrieel elektrotechnisch installateur",
-        //   "Technicus hernieuwbare energie",
-        //   "Klimatisatietechnicus",
-        //   "Technicus lichtreclame",
-        //   "Installateur zonnepanelen",
-        //   "Verwarmingsspecialist",
-        //   "Technicus inbraakbeveiligingssystemen",
-        // ];
-
-  console.log(copy);
 
   var solver = Matter.Engine.create();
   solver.world.gravity.y = 1;
