@@ -78,7 +78,7 @@ window.addEventListener("load", (event) => {
           "Technicus lichtreclame",
           "Installateur zonnepanelen",
           "Verwarmingsspecialist",
-          "Technicus inbraakbeveiligingssystemen",
+          //"Technicus inbraakbeveiligingssystemen",
         ];
 
         // [
