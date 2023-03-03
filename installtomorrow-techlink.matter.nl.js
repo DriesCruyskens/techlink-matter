@@ -140,7 +140,7 @@ window.addEventListener("load", (event) => {
     weight: 700,
     fill: "black",
     leading: two.width > 1000 ? two.width * 0.000001 : two.width * 0.0001,
-    family: "Angus, Arial, sans-serif",
+    family: "Inter, sans-serif",
     alignment: "center",
     baseline: "baseline",
     margin: {
