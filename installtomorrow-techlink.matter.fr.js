@@ -184,7 +184,7 @@ window.addEventListener("load", (event) => {
       size = two.width * 0.08;
     }
 
-    size = two.width > 1000 ? size / 3 : size / 2.2;
+    size = two.width > 1000 ? size / 3 : size / 3;
 
     var leading = size;
 
@@ -206,7 +206,7 @@ window.addEventListener("load", (event) => {
       // Change rect size here
       rect = {
         width: rect.width,
-        height: two.width > 1000 ? 60 : 50,
+        height: two.width > 1000 ? 60 : 30,
       };
       rectangle.width = rect.width;
       rectangle.height = rect.height;
@@ -263,7 +263,7 @@ window.addEventListener("load", (event) => {
 
       group.translation.x = ox;
       group.translation.y = oy;
-      text.translation.y = two.width > 1000 ? 10 : 12;
+      text.translation.y = two.width > 1000 ? 10 : 3;
 
       var rectangle = new Two.Rectangle(0, 0, rect.width, rect.height);
       rectangle.fill = "rgb(255, 255, 255)";
@@ -284,7 +284,9 @@ window.addEventListener("load", (event) => {
 
       // Change friction and margin here
       var entity = Matter.Bodies.rectangle(ox, oy, 1, 1, { friction: 0.5 });
-      Matter.Body.scale(entity, rect.width + 1, rect.height + 1);
+      two.width > 1000
+        ? Matter.Body.scale(entity, rect.width + 1, rect.height + 1)
+        : Matter.Body.scale(entity, rect.width + 0.2, rect.height + 0.2);
 
       entity.scale = new Two.Vector(rect.width, rect.height);
       entity.object = group;
