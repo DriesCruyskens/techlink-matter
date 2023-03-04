@@ -117,7 +117,7 @@ window.addEventListener("load", (event) => {
 
   addSlogan();
   resize();
-  mouse = addMouseInteraction();
+  two.width > 1000 ? (mouse = addMouseInteraction()) : null;
   two.bind("resize", resize).bind("update", update);
 
   const runMatter = function () {
@@ -307,8 +307,8 @@ window.addEventListener("load", (event) => {
 
   function update(frameCount, timeDelta) {
     var allBodies = Matter.Composite.allBodies(solver.world);
-    Matter.MouseConstraint.update(mouse, allBodies);
-    Matter.MouseConstraint._triggerEvents(mouse);
+    two.width > 1000 ? Matter.MouseConstraint.update(mouse, allBodies) : null;
+    two.width > 1000 ? Matter.MouseConstraint._triggerEvents(mouse) : null;
 
     Matter.Engine.update(solver);
 
