@@ -252,7 +252,7 @@ window.addEventListener("load", (event) => {
       entity.scale.set(rect.width, rect.height);
 
       // Change text size here
-      text.size = two.width > 1000 ? size * 0.8 : size * 0.95;
+      text.size = two.width > 1000 ? size * 0.8 : size * 1;
     }
   }
 
