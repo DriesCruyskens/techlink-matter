@@ -299,7 +299,7 @@ window.addEventListener("load", (event) => {
 
       group.translation.x = ox;
       group.translation.y = oy;
-      text.translation.y = two.width > 1000 ? 10 : 3;
+      text.translation.y = two.width > 1000 ? 10 : 4;
 
       var rectangle = new Two.Rectangle(0, 0, rect.width, rect.height);
       rectangle.fill = "rgb(255, 255, 255)";
