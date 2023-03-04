@@ -1,3 +1,8 @@
+TODO: 
+- lettertype kleiner
+- plaats tussen blokken (mobiel)
+- font
+
 - add to page (copy source instead of src attribute):
     - https://raw.githubusercontent.com/liabru/matter-js/master/build/matter.min.js
     - https://raw.githubusercontent.com/jonobr1/two.js/dev/build/two.min.js
