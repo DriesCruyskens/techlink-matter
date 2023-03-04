@@ -81,35 +81,35 @@ window.addEventListener("load", (event) => {
           //"Technicus inbraakbeveiligingssystemen",
         ];
 
-        // [
-        //   "Installateur zonnepanelen",
-        //   "Technicus hernieuwbare energie",
-        //   "Verwarmingsspecialist",
-        //   "Onderhoudstechnicus",
-        //   "Klimatisatietechnicus",
-        //   "Technicus inbraakbeveiligingssystemen",
-        //   "Elektrotechnicus",
-        //   "Servicetechnieker",
-        //   "Technicus lichtreclame",
-        //   "Loodgieter",
-        //   "Koeltechnicus",
-        //   "Industrieel elektrotechnisch installateur",
-        // ];
+  // [
+  //   "Installateur zonnepanelen",
+  //   "Technicus hernieuwbare energie",
+  //   "Verwarmingsspecialist",
+  //   "Onderhoudstechnicus",
+  //   "Klimatisatietechnicus",
+  //   "Technicus inbraakbeveiligingssystemen",
+  //   "Elektrotechnicus",
+  //   "Servicetechnieker",
+  //   "Technicus lichtreclame",
+  //   "Loodgieter",
+  //   "Koeltechnicus",
+  //   "Industrieel elektrotechnisch installateur",
+  // ];
 
-        // [
-        //   "Koeltechnicus",
-        //   "Servicetechnieker",
-        //   "Loodgieter",
-        //   "Onderhoudstechnicus",
-        //   "Elektrotechnicus",
-        //   "Industrieel elektrotechnisch installateur",
-        //   "Technicus hernieuwbare energie",
-        //   "Klimatisatietechnicus",
-        //   "Technicus lichtreclame",
-        //   "Installateur zonnepanelen",
-        //   "Verwarmingsspecialist",
-        //   "Technicus inbraakbeveiligingssystemen",
-        // ];
+  // [
+  //   "Koeltechnicus",
+  //   "Servicetechnieker",
+  //   "Loodgieter",
+  //   "Onderhoudstechnicus",
+  //   "Elektrotechnicus",
+  //   "Industrieel elektrotechnisch installateur",
+  //   "Technicus hernieuwbare energie",
+  //   "Klimatisatietechnicus",
+  //   "Technicus lichtreclame",
+  //   "Installateur zonnepanelen",
+  //   "Verwarmingsspecialist",
+  //   "Technicus inbraakbeveiligingssystemen",
+  // ];
 
   //console.log(copy);
 
@@ -320,7 +320,9 @@ window.addEventListener("load", (event) => {
 
       // Change friction and margin here
       var entity = Matter.Bodies.rectangle(ox, oy, 1, 1, { friction: 0.5 });
-      Matter.Body.scale(entity, rect.width + 1, rect.height + 1);
+      two.width > 1000
+        ? Matter.Body.scale(entity, rect.width + 1, rect.height + 1)
+        : Matter.Body.scale(entity, rect.width + .2, rect.height + .2);
 
       entity.scale = new Two.Vector(rect.width, rect.height);
       entity.object = group;
