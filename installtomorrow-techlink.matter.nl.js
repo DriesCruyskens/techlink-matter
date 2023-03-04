@@ -45,7 +45,7 @@ window.addEventListener("load", (event) => {
   ];
 
   var two = new Two({
-    type: Two.Types.canvas,
+    type: Two.Types.svg,
     fitted: true,
     autostart: false,
   }).appendTo(document.getElementById("matter"));
